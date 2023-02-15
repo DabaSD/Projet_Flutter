@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/main.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -75,7 +76,9 @@ class _MyLoginState extends State<MyLogin> {
                       backgroundColor: const Color(0xff4c505b),
                       child: IconButton(
                         color: Colors.white,
-                        onPressed: () {},
+                        onPressed: () {
+                          runApp(const MyApp1());
+                        },
                         icon: const Icon(Icons.arrow_forward),
                       ),
                     ),

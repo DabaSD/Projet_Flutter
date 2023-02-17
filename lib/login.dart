@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projet_flutter/main.dart';
+import 'package:projet_flutter/Modules.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -77,7 +77,8 @@ class _MyLoginState extends State<MyLogin> {
                       child: IconButton(
                         color: Colors.white,
                         onPressed: () {
-                          runApp(const MyApp1());
+                           Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const MyModules()));
                         },
                         icon: const Icon(Icons.arrow_forward),
                       ),

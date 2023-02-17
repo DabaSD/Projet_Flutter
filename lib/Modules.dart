@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/liste.dart';
 
 class MyModules extends StatefulWidget {
   const MyModules({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _MyModuleState extends State<MyModules> {
           children: [
               Container(
                 height: 230, 
-                decoration:BoxDecoration(
+                decoration:const BoxDecoration(
                   borderRadius:BorderRadius.only(
                     bottomRight:Radius.circular(60) 
                   ),
@@ -34,7 +35,7 @@ class _MyModuleState extends State<MyModules> {
                       child:Container(
                           height: 100,
                           width:300,
-                          decoration:BoxDecoration(
+                          decoration:const BoxDecoration(
                             color:Colors.white,
                             borderRadius: BorderRadius.only(
                               topRight:Radius.circular(50),
@@ -43,7 +44,7 @@ class _MyModuleState extends State<MyModules> {
                           ),
                       )
                       ),
-                      Positioned(
+                      const Positioned(
                         top:110,
                         left:20,
                         child: Text("Modules et Applications",style:TextStyle(fontSize:20,color:Color.fromARGB(255, 66, 107, 140),fontWeight: FontWeight.w300,)),
@@ -71,7 +72,7 @@ class _MyModuleState extends State<MyModules> {
                               color: Colors.grey.withOpacity(0.5),
                               spreadRadius: 4.0,
                               blurRadius: 7,
-                              offset:new Offset(-10.0, 10.0), // changes position of shadow
+                              offset:const Offset(-10.0, 10.0), // changes position of shadow
                             ),
                           ],
                            
@@ -93,7 +94,7 @@ class _MyModuleState extends State<MyModules> {
                               width: 150,
                               decoration:BoxDecoration(
                                 borderRadius: BorderRadius.circular(10.0),
-                                image : DecorationImage(
+                                image : const DecorationImage(
                                   fit:BoxFit.fill,
                                   image:AssetImage("contrat.png"),
                                 ),
@@ -106,24 +107,28 @@ class _MyModuleState extends State<MyModules> {
                           left: 200,
                           child:
                           Container(
-                            height: 190,
+                            height: 220,
                             width: 250,
                             child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                                Text("Recrutement",style: TextStyle(
+                                GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MyLinks()));
+                                },),
+                                const Text("Recrutement",style: TextStyle(
                                   fontSize: 22,
                                   color:Color.fromARGB(255, 66, 107, 140),
                                   fontWeight: FontWeight.bold,
                                 ),),
-                                Divider(color: Colors.black,),
-                                Text("Gestion et suivi des campagnes de recrutement",style: TextStyle(
+                                const Divider(color: Colors.black,),
+                                const Text("Gestion et suivi des campagnes de recrutement",style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.grey,
                                   
                                 ),),
                                 
-                                Padding(
+                                const Padding(
                                   padding:EdgeInsets.only(top:35),
                                  child:Image(
                                   image:AssetImage("parametre.png"),

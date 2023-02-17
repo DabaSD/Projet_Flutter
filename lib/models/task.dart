@@ -1,12 +1,12 @@
 class Task {
   final String taskName;
-  final String description;
+  final String poste;
   final DateTime taskTime;
   final bool isDone;
 
   Task(
     this.taskName,
-    this.description,
+    this.poste,
     this.taskTime,
     this.isDone,
   );

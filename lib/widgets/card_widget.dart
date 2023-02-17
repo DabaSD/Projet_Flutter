@@ -51,7 +51,7 @@ class CardWidget extends StatelessWidget {
               ? const SizedBox()
               : Container(
                   width: 2,
-                  color: const Color(0xff08034c),
+                  color: const Color.fromARGB(255, 85, 187, 231),
                 ),
           title: Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -64,7 +64,7 @@ class CardWidget extends StatelessWidget {
             ),
           ),
           subtitle: Text(
-            task.description,
+            task.poste,
             style: TextStyle(
               color: Colors.blue.shade700,
               fontSize: 16,

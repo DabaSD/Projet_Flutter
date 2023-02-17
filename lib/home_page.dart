@@ -32,8 +32,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xff08034c),
-                      Color(0xff08034c),
+                      Color.fromARGB(255, 85, 187, 231),
+                      Color.fromARGB(255, 85, 187, 231),
                     ],
                     begin: Alignment.centerRight,
                     end: Alignment.centerLeft,
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: const Color(0xff08034c),
+        color: const Color.fromARGB(255, 85, 187, 231),
         shape: const CircularNotchedRectangle(),
         notchMargin: 8,
         child: Row(
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                 return const FormWidget();
               });
         },
-        backgroundColor: const Color(0xff08034c),
+        backgroundColor: const Color.fromARGB(255, 85, 187, 231),
         foregroundColor: const Color(0xffffffff),
         child: const Icon(
           Icons.add,

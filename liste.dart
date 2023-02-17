@@ -1,0 +1,156 @@
+import 'package:flutter/material.dart';
+
+class MyLinks extends StatefulWidget {
+  const MyLinks({Key? key}) : super(key: key);
+
+  @override
+  _MyLinkState createState() => _MyLinkState();
+}
+
+
+class _MyLinkState extends State<MyLinks> {
+  @override
+  Widget build(BuildContext context) {
+   final double height=MediaQuery.of(context).size.height;
+   final double width=MediaQuery.of(context).size.width;  
+   return Scaffold(
+
+backgroundColor:Colors.white,
+        body: Column(
+          children: [
+              Container(
+                height: 230, 
+                
+                decoration:BoxDecoration(
+                  borderRadius:BorderRadius.only(
+                    bottomRight:Radius.circular(60) 
+                  ),
+                    color:Color.fromARGB(255, 85,187,231 ),
+                ),
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top:80,
+                      left:0,
+                      child:Container(
+                          height: 100,
+                          width:300,
+                          decoration:BoxDecoration(
+                            color:Colors.white,
+                            borderRadius: BorderRadius.only(
+                              topRight:Radius.circular(50),
+                              bottomRight: Radius.circular(50),
+                            )
+                          ),
+                      )
+                      ),
+                      Positioned(
+                        top:110,
+                        left:20,
+                        child: Text("Recrutement",style:TextStyle(fontSize:20,color:Color.fromARGB(255, 66, 107, 140),fontWeight: FontWeight.bold,)),
+                        )
+                  ],
+                ),
+              ),
+              SizedBox(height:height*0.05,),
+              Container(
+                
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AutrePage()),
+            );
+                },
+                child: Text(
+                  'Listes des candidatures',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 66, 107, 140), // couleur du texte
+                    fontSize: 18, // taille du texte
+                    fontWeight: FontWeight.bold, // poids de la police
+                  ),
+                  ),
+                style: ElevatedButton.styleFrom(
+                  elevation: 15, // épaisseur de l'ombre
+                  shadowColor: Color.fromARGB(255, 98, 168, 226), // couleur de l'ombre
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15), // rayon des coins
+                  ),
+                  minimumSize: Size(300, 50),
+                  backgroundColor: Colors.white, // taille minimale du bouton
+                ),
+              ),
+
+
+
+              ),
+              SizedBox(height:height*0.05,),
+              Container(
+                
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AutrePage()),
+            );
+                },
+                child: Text(
+                  'Nouvelles candidatures',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 66, 107, 140), // couleur du texte
+                    fontSize: 18, // taille du texte
+                    fontWeight: FontWeight.bold, // poids de la police
+                  ),
+                  ),
+                style: ElevatedButton.styleFrom(
+                  elevation: 15, // épaisseur de l'ombre
+                  shadowColor: Color.fromARGB(255, 98, 168, 226), // couleur de l'ombre
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15), // rayon des coins
+                  ),
+                  minimumSize: Size(300, 50),
+                  backgroundColor: Colors.white, // taille minimale du bouton
+                ),
+              ),
+
+
+
+              ),
+              SizedBox(height:height*0.05,),
+              Container(
+                
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AutrePage()),
+            );
+                },
+                child: Text(
+                  'Listes des postes',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 66, 107, 140), // couleur du texte
+                    fontSize: 18, // taille du texte
+                    fontWeight: FontWeight.bold, // poids de la police
+                  ),
+                  ),
+                style: ElevatedButton.styleFrom(
+                  elevation: 15, // épaisseur de l'ombre
+                  shadowColor: Color.fromARGB(255, 98, 168, 226), // couleur de l'ombre
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15), // rayon des coins
+                  ),
+                  minimumSize: Size(300, 50),
+                  backgroundColor: Colors.white, // taille minimale du bouton
+                ),
+              ),
+
+
+
+              ),
+          ],
+        ),
+
+   );
+  }
+}

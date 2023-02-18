@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class MyCandidature extends StatefulWidget {
   const MyCandidature({Key? key, required bool debugShowCheckedModeBanner})
       : super(key: key);
+  const MyCandidature({Key? key, required bool debugShowCheckedModeBanner})
+      : super(key: key);
 
   @override
   State<MyCandidature> createState() => _MyCandidatureState();
@@ -28,6 +30,7 @@ class _MyCandidatureState extends State<MyCandidature> {
             const TextField(
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.work),
+                  prefixIcon: Icon(Icons.work),
                   labelText: 'job',
                   hintText: 'Indiquer votre job',
                   border: OutlineInputBorder()),
@@ -36,6 +39,7 @@ class _MyCandidatureState extends State<MyCandidature> {
             const TextField(
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.person),
+                  prefixIcon: Icon(Icons.person),
                   labelText: 'Nom complet',
                   hintText: 'Entrer votre nom ',
                   border: OutlineInputBorder()),
@@ -43,6 +47,7 @@ class _MyCandidatureState extends State<MyCandidature> {
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.email),
                   prefixIcon: Icon(Icons.email),
                   labelText: 'Email',
                   hintText: 'Indiquer votre Email',
@@ -59,6 +64,7 @@ class _MyCandidatureState extends State<MyCandidature> {
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.calendar_today),
                   prefixIcon: Icon(Icons.calendar_today),
                   labelText: 'Date de naissance',
                   hintText: 'Indiquer votre date de naissance',
@@ -103,6 +109,29 @@ class _MyCandidatureState extends State<MyCandidature> {
               ],
             )
             /* Container(
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ElevatedButton(
+                  style: const ButtonStyle(
+                      padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
+                      backgroundColor: MaterialStatePropertyAll(
+                          Color.fromARGB(255, 98, 168, 226))),
+                  onPressed: () {},
+                  child: Text('Annuler'),
+                ),
+                ElevatedButton(
+                  style: const ButtonStyle(
+                      padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
+                      backgroundColor: MaterialStatePropertyAll(
+                          Color.fromARGB(255, 98, 168, 226))),
+                  onPressed: () {},
+                  child: const Text('Creer'),
+                ),
+              ],
+            )
+            /* Container(
               padding:
                   const EdgeInsets.symmetric(vertical: 50.0, horizontal: 30.0),
               child: ElevatedButton(
@@ -111,6 +140,9 @@ class _MyCandidatureState extends State<MyCandidature> {
                     backgroundColor: MaterialStatePropertyAll(
                         Color.fromARGB(255, 98, 168, 226))),
                 onPressed: () {},
+                child: 
+                const Text("Creer"),
+                
                 child: 
                 const Text("Creer"),
                 
@@ -126,6 +158,7 @@ class _MyCandidatureState extends State<MyCandidature> {
                 child: const Text("Annuler"),
               ),
             ),
+            */
             */
           ],
         )),

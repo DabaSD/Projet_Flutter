@@ -132,7 +132,7 @@ class _MyCandidatureState extends State<MyCandidature> {
                   style: const ButtonStyle(
                       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
                       backgroundColor: MaterialStatePropertyAll(
-                          Color.fromARGB(255, 98, 168, 226))),
+                          Color.fromARGB(255, 85, 187, 231))),
                   onPressed: () {
                   Navigator.push(
                   context,
@@ -145,7 +145,7 @@ class _MyCandidatureState extends State<MyCandidature> {
                   style: const ButtonStyle(
                       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
                       backgroundColor: MaterialStatePropertyAll(
-                          Color.fromARGB(255, 98, 168, 226))),
+                          Color.fromARGB(255, 85, 187, 231))),
                   onPressed: () {
                     
                   },

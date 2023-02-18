@@ -89,7 +89,7 @@ class _MyPosteState extends State<MyPoste> {
                   style: const ButtonStyle(
                       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
                       backgroundColor: MaterialStatePropertyAll(
-                          Color.fromARGB(255, 98, 168, 226))),
+                          Color.fromARGB(255, 85, 187, 231))),
                   onPressed: () {
                     Navigator.push(
                   context,
@@ -102,7 +102,7 @@ class _MyPosteState extends State<MyPoste> {
                   style: const ButtonStyle(
                       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
                       backgroundColor: MaterialStatePropertyAll(
-                          Color.fromARGB(255, 98, 168, 226))),
+                          Color.fromARGB(255, 85, 187, 231))),
                   onPressed: () {},
                   child: const Text('Créer'),
                 ),

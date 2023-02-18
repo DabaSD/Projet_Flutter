@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/NouvelleCandidature.dart';
 import 'package:projet_flutter/Services/recuperationCandidatures.dart';
 import 'package:projet_flutter/models/Candidature.dart';
 
@@ -11,19 +12,19 @@ class ListeCandidatures extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Liste des candidatures"),
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 85, 187, 231),
       ),
       body: const Center(
         child: CandidaturesList(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {/*
+        onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const postesForm()),
-          );*/
+            MaterialPageRoute(builder: (context) => const MyCandidature(debugShowCheckedModeBanner: false,)),
+          );
         },
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 85, 187, 231),
         child: const Icon(Icons.add),
       ),
     );
@@ -85,7 +86,7 @@ class CandidatureListWidget extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
-                color: Colors.blue,
+                color:const Color.fromARGB(255, 85, 187, 231),
               ),
             ),
             subtitle: Text("${candidature.lastname} ${candidature.firstname} "),

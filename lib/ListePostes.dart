@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/NouveauPoste.dart';
 import 'package:projet_flutter/Services/recuperationPostes.dart';
 import 'package:projet_flutter/models/Poste.dart';
 
@@ -11,19 +12,19 @@ class ListePostes extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Liste des postes"),
-        backgroundColor: Colors.blue,
+        backgroundColor:const Color.fromARGB(255, 85, 187, 231),
       ),
       body: const Center(
         child: PostesList(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {/*
+        onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const postesForm()),
-          );*/
+            MaterialPageRoute(builder: (context) => const MyPoste(debugShowCheckedModeBanner: false,)),
+          );
         },
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 85, 187, 231),
         child: const Icon(Icons.add),
       ),
     );
@@ -85,7 +86,7 @@ class PosteListWidget extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
-                color: Colors.blue,
+                color:const Color.fromARGB(255, 85, 187, 231),
               ),
             ),
             subtitle: Text("${poste.emailRecruiter} "),

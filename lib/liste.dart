@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/NouveauPoste.dart';
 import 'package:projet_flutter/NouvelleCandidature.dart';
 import 'package:projet_flutter/home_page.dart';
 
@@ -61,7 +62,7 @@ backgroundColor:Colors.white,
                 onPressed: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  MaterialPageRoute(builder: (context) => const MyPoste(debugShowCheckedModeBanner: false,)),
             );
                 },
                 style: ElevatedButton.styleFrom(
@@ -138,7 +139,7 @@ backgroundColor:Colors.white,
                   backgroundColor: Colors.white, // taille minimale du bouton
                 ),
                 child: const Text(
-                  'Listes des candidatures',
+                  'Liste des candidatures',
                   style: TextStyle(
                     color: Color(0xff4c505b), // couleur du texte
                     fontSize: 18, // taille du texte

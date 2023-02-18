@@ -47,7 +47,7 @@ class _MyModuleState extends State<MyModules> {
                       const Positioned(
                         top:110,
                         left:20,
-                        child: Text("Modules et Applications",style:TextStyle(fontSize:20,color:Color.fromARGB(255, 66, 107, 140),fontWeight: FontWeight.w300,)),
+                        child: Text("Modules et Applications",style:TextStyle(fontSize:20,color:Color(0xff4c505b),fontWeight: FontWeight.w300,)),
                         )
                   ],
                 ),
@@ -121,7 +121,7 @@ class _MyModuleState extends State<MyModules> {
                                     },
                                   child: const Text("Recrutement",style: TextStyle(
                                   fontSize: 22,
-                                  color:Color.fromARGB(255, 66, 107, 140),
+                                  color:Color(0xff4c505b),
                                   fontWeight: FontWeight.bold,
                                 ),),
                                 ),
@@ -129,7 +129,7 @@ class _MyModuleState extends State<MyModules> {
                                 const Divider(color: Colors.black,),
                                 const Text("Gestion et suivi des campagnes de recrutement",style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.grey,
+                                  color: Color(0xff4c505b),
                                   
                                 ),),
                                 

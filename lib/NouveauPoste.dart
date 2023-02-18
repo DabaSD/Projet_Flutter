@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/liste.dart';
 
 class MyPoste extends StatefulWidget {
   const MyPoste({Key? key, required bool debugShowCheckedModeBanner})
@@ -74,14 +75,12 @@ class _MyPosteState extends State<MyPoste> {
                   hintText: 'Rénumeration',
                   border: UnderlineInputBorder()),
             ),
-             const SizedBox(height: 20),
+              const SizedBox(height: 10),
             const TextField(
-              decoration: InputDecoration(
-                  // prefixIcon: Icon(Icons.monetization_on),
-                  prefixIcon: Icon(Icons.calendar_today),
-                  hintText: 'Description',
-                  border: OutlineInputBorder()),
-            ),
+                maxLines: 5,
+                decoration: InputDecoration(
+                    hintText: 'Description',
+                    border: OutlineInputBorder())),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,7 +90,12 @@ class _MyPosteState extends State<MyPoste> {
                       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
                       backgroundColor: MaterialStatePropertyAll(
                           Color.fromARGB(255, 98, 168, 226))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyLinks()),
+            );
+                  },
                   child: const Text('Annuler'),
                 ),
                 ElevatedButton(

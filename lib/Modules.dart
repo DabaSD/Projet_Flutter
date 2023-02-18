@@ -114,13 +114,18 @@ class _MyModuleState extends State<MyModules> {
                             children: [
                                 GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MyLinks()));
-                                },),
-                                const Text("Recrutement",style: TextStyle(
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(builder: (context) => const MyLinks())
+                                    );
+                                    },
+                                  child: const Text("Recrutement",style: TextStyle(
                                   fontSize: 22,
                                   color:Color.fromARGB(255, 66, 107, 140),
                                   fontWeight: FontWeight.bold,
                                 ),),
+                                ),
+                               
                                 const Divider(color: Colors.black,),
                                 const Text("Gestion et suivi des campagnes de recrutement",style: TextStyle(
                                   fontSize: 14,

@@ -16,7 +16,7 @@ class _FormWidgetState extends State<FormWidget> {
           16,
         ),
       ),
-      title: const Text('Nouveau Candidature'),
+      title: const Text('Candidatures'),
       content: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24),

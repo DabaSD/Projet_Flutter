@@ -93,7 +93,7 @@ backgroundColor:Colors.white,
                 onPressed: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyCandidature()),
+                  MaterialPageRoute(builder: (context) => const MyCandidature(debugShowCheckedModeBanner: false,)),
             );
                 },
                 style: ElevatedButton.styleFrom(

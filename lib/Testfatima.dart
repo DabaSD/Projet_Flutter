@@ -40,7 +40,7 @@ class Mytestf extends StatelessWidget {
                 backgroundColor: MaterialStatePropertyAll(
                     Color.fromARGB(255, 248, 249, 250))),
             onPressed: () {},
-            child: const Text('Fichiers jointes',
+            child: const Text('Fichiers joints',
                 style: TextStyle(color: Color.fromARGB(255, 98, 168, 226))),
           ),
           ElevatedButton(

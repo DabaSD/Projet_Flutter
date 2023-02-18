@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/Services/recuperationCandidatures.dart';
+import 'package:projet_flutter/Services/recuperationPostes.dart';
+
 
 class MyCandidature extends StatefulWidget {
   const MyCandidature({Key? key, required bool debugShowCheckedModeBanner})
@@ -9,7 +12,15 @@ class MyCandidature extends StatefulWidget {
 }
 
 class _MyCandidatureState extends State<MyCandidature> {
-  //final _formKey = GlobalKey<FormState>;
+
+final _formKey = GlobalKey<FormState>();
+final job = TextEditingController();
+final nom = TextEditingController();
+final prenom = TextEditingController();
+final email = TextEditingController();
+final telephone = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,64 +30,80 @@ class _MyCandidatureState extends State<MyCandidature> {
             title: const Text("Nouvelle candidature"),
             backgroundColor: const Color.fromARGB(255, 85, 187, 231)),
         // ignore: prefer_const_constructors
-        body: Center(
+        body: SingleChildScrollView(
             // ignore: prefer_const_constructors
             child: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             const SizedBox(height: 20),
-            const TextField(
+             TextField(
+              controller: job,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.work),
-                  labelText: 'job',
-                  hintText: 'Indiquer votre job',
-                  border: OutlineInputBorder()),
+                  hintText: 'job',
+                  border: UnderlineInputBorder()),
             ),
             const SizedBox(height: 10),
-            const TextField(
+             TextField(
+              controller: nom,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.person),
-                  labelText: 'Nom complet',
-                  hintText: 'Entrer votre nom ',
-                  border: OutlineInputBorder()),
+                 hintText: 'Nom',
+                  border: UnderlineInputBorder()),
+            ),
+            
+            const SizedBox(height: 10),
+              TextField(
+                controller: prenom,
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.person),
+                 hintText: 'Prenom',
+                  border: UnderlineInputBorder()),
             ),
             const SizedBox(height: 10),
-            const TextField(
+             TextField(
+              controller: email,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.email),
-                  labelText: 'Email',
-                  hintText: 'Indiquer votre Email',
-                  border: OutlineInputBorder()),
+                 hintText: 'Email',
+                  border: UnderlineInputBorder()),
             ),
             const SizedBox(height: 10),
-            const TextField(
+             TextField(
+              controller: telephone,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.phone),
-                  labelText: 'Téléphone',
-                  hintText: 'Indiquer votre numero téléphone',
-                  border: OutlineInputBorder()),
+                 hintText: 'Téléphone',
+                  border: UnderlineInputBorder()),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.calendar_today),
-                  labelText: 'Date de naissance',
-                  hintText: 'Indiquer votre date de naissance',
-                  border: OutlineInputBorder()),
+                 hintText: 'Date de naissance',
+                  border: UnderlineInputBorder()),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.monetization_on),
-                  labelText: 'Rénumeration demandée',
-                  border: OutlineInputBorder()),
+                 hintText: 'Rénumeration demandée',
+                  border: UnderlineInputBorder()),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.attach_money_rounded),
-                  labelText: 'Rénumeration proposée',
+                 hintText: 'Rénumeration proposée',
                   // hintText: 'indiquer votre date de naissance',
+                  border: UnderlineInputBorder()),
+            ),
+             const SizedBox(height: 20),
+            const TextField(
+              decoration: InputDecoration(
+                  // prefixIcon: Icon(Icons.monetization_on),
+                  prefixIcon: Icon(Icons.calendar_today),
+                 hintText: 'Description',
                   border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
@@ -96,7 +123,9 @@ class _MyCandidatureState extends State<MyCandidature> {
                       padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
                       backgroundColor: MaterialStatePropertyAll(
                           Color.fromARGB(255, 98, 168, 226))),
-                  onPressed: () {},
+                  onPressed: () {
+                    
+                  },
                   child: const Text('Creer'),
                 ),
               ],

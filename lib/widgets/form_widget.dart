@@ -16,7 +16,7 @@ class _FormWidgetState extends State<FormWidget> {
           16,
         ),
       ),
-      title: const Text('Candidatures'),
+      title: const Text('Ajout'),
       content: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24),
@@ -25,11 +25,11 @@ class _FormWidgetState extends State<FormWidget> {
           children: [
             TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -44,11 +44,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
             TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -63,11 +63,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
             TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder:UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -82,11 +82,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
             TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -101,11 +101,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
             TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -124,11 +124,11 @@ class _FormWidgetState extends State<FormWidget> {
                   Icons.calendar_month,
                   color: Colors.grey.shade900,
                 ),
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -143,11 +143,11 @@ class _FormWidgetState extends State<FormWidget> {
             ),
             TextField(
               decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
+                enabledBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: UnderlineInputBorder(
                   borderSide: const BorderSide(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10),
                 ),

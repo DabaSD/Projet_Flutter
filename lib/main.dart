@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/ListeCandidatures.dart';
 import 'package:projet_flutter/login.dart';
-import 'package:projet_flutter/home_page.dart';
 
 
 void main() {
@@ -35,7 +35,7 @@ class MyApp1 extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const ListeCandidatures(),
     );
   }
 }

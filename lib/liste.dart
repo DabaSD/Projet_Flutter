@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:projet_flutter/ListeCandidatures.dart';
+import 'package:projet_flutter/ListePostes.dart';
 import 'package:projet_flutter/NouveauPoste.dart';
 import 'package:projet_flutter/NouvelleCandidature.dart';
-import 'package:projet_flutter/home_page.dart';
 
 class MyLinks extends StatefulWidget {
   const MyLinks({Key? key}) : super(key: key);
@@ -83,10 +84,37 @@ backgroundColor:Colors.white,
                   ),
                   ),
               ),
-
-
-
               ),
+              SizedBox(height:height*0.05,),
+              Container(
+                
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ListePostes()),
+            );
+                },
+                style: ElevatedButton.styleFrom(
+                  elevation: 15, // épaisseur de l'ombre
+                  shadowColor: const Color.fromARGB(255, 98, 168, 226), // couleur de l'ombre
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15), // rayon des coins
+                  ),
+                  minimumSize: const Size(300, 50),
+                  backgroundColor: Colors.white, // taille minimale du bouton
+                ),
+                child: const Text(
+                  'Liste des postes',
+                  style: TextStyle(
+                    color: Color(0xff4c505b), // couleur du texte
+                    fontSize: 18, // taille du texte
+                    fontWeight: FontWeight.bold, // poids de la police
+                  ),
+                  ),
+              ),
+              ),
+
               SizedBox(height:height*0.05,),
               Container(
                 
@@ -107,7 +135,7 @@ backgroundColor:Colors.white,
                   backgroundColor: Colors.white, // taille minimale du bouton
                 ),
                 child: const Text(
-                  'Nouvelles candidatures',
+                  'Nouvelle candidature',
                   style: TextStyle(
                     color: Color(0xff4c505b), // couleur du texte
                     fontSize: 18, // taille du texte
@@ -115,10 +143,9 @@ backgroundColor:Colors.white,
                   ),
                   ),
               ),
-
-
-
               ),
+
+
               SizedBox(height:height*0.05,),
               Container(
                 
@@ -126,7 +153,7 @@ backgroundColor:Colors.white,
                 onPressed: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  MaterialPageRoute(builder: (context) => const ListeCandidatures()),
             );
                 },
                 style: ElevatedButton.styleFrom(

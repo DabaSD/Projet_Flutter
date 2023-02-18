@@ -14,39 +14,27 @@ class Task {
 
 List<Task> listTask = [
   Task(
-    '123456789A',
-    'Secretaire',
+    'PROV1',
+    'DIAGNE Daba Samb',
     DateTime(2022, 9, 26, 7, 30),
     false,
   ),
   Task(
-    '123456789B',
-    'Comptable',
+    'PROV2',
+    'DIONE  Khadidiatou Mane',
     DateTime(2022, 9, 26, 10, 00),
     false,
   ),
   Task(
-    '123456789C',
-    'Programmeur',
+    'PROV3',
+    'DIA Fatima Tidiane',
     DateTime(2022, 9, 26, 12, 30),
     false,
   ),
   Task(
-    '123456789D',
-    'Analyste de données',
+    'PROV4',
+    'DRAME  Khadija Bassirou',
     DateTime(2022, 9, 26, 15, 30),
-    false,
-  ),
-  Task(
-    '123456789E',
-    'Chef de projet',
-    DateTime(2022, 9, 26, 17),
-    false,
-  ),
-  Task(
-    '123456789F',
-    'Administrateur BD',
-    DateTime(2022, 9, 26, 17),
     false,
   ),
 ];

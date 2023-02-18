@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:projet_flutter/Services/recuperationCandidatures.dart';
-import 'package:projet_flutter/Services/recuperationPostes.dart';
 
+void main() {
+  runApp(const MyCandidature(
+    debugShowCheckedModeBanner: false,
+  ));
+}
 
 class MyCandidature extends StatefulWidget {
   const MyCandidature({Key? key, required bool debugShowCheckedModeBanner})
@@ -12,14 +15,16 @@ class MyCandidature extends StatefulWidget {
 }
 
 class _MyCandidatureState extends State<MyCandidature> {
+  String? dropdownvalue = 'Brouillon';
 
-final _formKey = GlobalKey<FormState>();
-final job = TextEditingController();
-final nom = TextEditingController();
-final prenom = TextEditingController();
-final email = TextEditingController();
-final telephone = TextEditingController();
-
+  var items = [
+    'Brouillon',
+    'Reçu',
+    'Contrat proposé',
+    'Contrat signé',
+    'Refusé',
+    'Annulé'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +34,18 @@ final telephone = TextEditingController();
         appBar: AppBar(
             title: const Text("Nouvelle candidature"),
             backgroundColor: const Color.fromARGB(255, 85, 187, 231)),
-        // ignore: prefer_const_constructors
         body: SingleChildScrollView(
-            // ignore: prefer_const_constructors
             child: Column(
-          // ignore: prefer_const_literals_to_create_immutables
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
              TextField(
               controller: job,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.work),
-                  hintText: 'job',
-                  border: UnderlineInputBorder()),
+                  labelText: 'job',
+                  hintText: 'indiquer votre job',
+                  border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
              TextField(
@@ -57,44 +61,50 @@ final telephone = TextEditingController();
                 controller: prenom,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.person),
-                 hintText: 'Prenom',
-                  border: UnderlineInputBorder()),
+                  labelText: 'Nom complet',
+                  hintText: 'entrer votre nom ',
+                  border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
              TextField(
               controller: email,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.email),
-                 hintText: 'Email',
-                  border: UnderlineInputBorder()),
+                  labelText: 'EMail',
+                  labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                  hintText: 'indiquer votre Email',
+                  border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
              TextField(
               controller: telephone,
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.phone),
-                 hintText: 'Téléphone',
-                  border: UnderlineInputBorder()),
+                  labelText: 'Telephone',
+                  hintText: 'indiquer votre numero Telephone',
+                  border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
                   prefixIcon: Icon(Icons.calendar_today),
-                 hintText: 'Date de naissance',
-                  border: UnderlineInputBorder()),
+                  labelText: 'Date de naissance',
+                  hintText: 'indiquer votre date de naissance',
+                  border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.monetization_on),
-                 hintText: 'Rénumeration demandée',
-                  border: UnderlineInputBorder()),
+                  // prefixIcon: Icon(Icons.monetization_on),
+                  labelText: 'Renumeration demandée',
+                  // hintText: 'indiquer votre date de naissance',
+                  border: OutlineInputBorder()),
             ),
             const SizedBox(height: 10),
             const TextField(
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.attach_money_rounded),
-                 hintText: 'Rénumeration proposée',
+                  // prefixIcon: Icon(Icons.attach_money_rounded),
+                  labelText: 'Renumeration proposée',
                   // hintText: 'indiquer votre date de naissance',
                   border: UnderlineInputBorder()),
             ),
@@ -106,6 +116,35 @@ final telephone = TextEditingController();
                  hintText: 'Description',
                   border: OutlineInputBorder()),
             ),
+            const SizedBox(height: 10),
+            const TextField(
+                maxLines: 5,
+                decoration: InputDecoration(
+                    labelText: 'Description',
+                    //hintText: 'ajouter une description',
+                    border: OutlineInputBorder())),
+            const SizedBox(height: 10),
+            const TextField(
+                decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.calendar_today),
+                    labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                    labelText: 'Date de création',
+                    hintText: 'indiquer la date de creation',
+                    border: OutlineInputBorder())),
+            const SizedBox(height: 10),
+            const Text("Etat :",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            DropdownButton(
+                value: dropdownvalue,
+                icon: const Icon(Icons.keyboard_arrow_down),
+                items: items.map((items) {
+                  return DropdownMenuItem(value: items, child: Text(items));
+                }).toList(),
+                onChanged: (String? newValue) {
+                  setState(() {
+                    dropdownvalue = newValue;
+                  });
+                }),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,6 +169,32 @@ final telephone = TextEditingController();
                 ),
               ],
             )
+
+            /* Container(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 50.0, horizontal: 30.0),
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                    padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromARGB(255, 98, 168, 226))),
+                onPressed: () {},
+                child: 
+                const Text("Creer"),
+                
+              ),
+            ),
+            Container(
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                    padding: MaterialStatePropertyAll(EdgeInsets.all(20)),
+                    backgroundColor: MaterialStatePropertyAll(
+                        Color.fromARGB(255, 98, 168, 226))),
+                onPressed: () {},
+                child: const Text("Annuler"),
+              ),
+            ),
+            */
           ],
         )),
       ),
